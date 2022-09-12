@@ -1,0 +1,66 @@
+*{
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Share Tech Mono', monospace;
+    
+}
+body{
+    background-color: #c2557f;
+}
+
+.ContenidoPrincipal{
+    margin-top: 4em;
+}
+#calculadora {
+  
+  width: 400px;
+  display: block;
+  /* border-radius: 30px; */
+  border: 1px solid;
+  border-color: #0d395b;
+  padding: 9px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(0deg, #121010 7%, #1D4C71 100%);
+}
+
+#pantalla {
+    background: #d1cece;
+    padding: 8px;
+    margin:5px 11px 10px 16px;
+    /* border-radius:8px; */
+}
+
+#resultado {
+    font-size:1.8em;
+    height: 50px;
+  }
+  
+  #resultado,
+  #previo {
+    text-align: right;
+    
+  }
+#previo{
+height: 40px;
+overflow:auto;
+overflow-y: hidden;
+}
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+  #teclado {
+    margin-right: 11px;
+  }
+
+  button {
+    width: 50px;
+  }
+
+  .Autor{
+    font-family: "Informal Roman";
+    color: white;
+    word-spacing: 0.25em;
+
+  }

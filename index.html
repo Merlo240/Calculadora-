@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="ContenidoPrincipal">
+    <div class="container">
+      <div id="calculadora" class="shadow-lg rounded-4">
+        <div class="d-flex justify-content-around align-items-center ">
+          <p class="fs-4 d-inline text-white">Casio</p>
+          <p class="fs-6 d-inline text-white">KK-82MS</p>
+        </div>
+        <div id="pantalla" class="shadow-lg rounded-3 ">
+          <div id="resultado"><p>_</p></div>
+          <div id="previo"><p>0</p></div>
+        </div>
+        <div id="teclado">
+          <div class="row my-3 mx-auto">
+            <div class="col-2 ">
+              <button type="button" class="btn btn-dark"  value="(">(</button>
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-dark" value=")">)</button>
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-dark" value="">x!</button>
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-dark" value="">x<sup>2</sup></button>
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-dark" value="">√</button>
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-dark" value=""><sup>n</sup>√</button>
+            </div>
+            </div>
+            <!-- 2fila -->
+            <div class="row my-3 mx-auto ">
+              <div class="col-2 ">
+                <button type="button" class="btn btn-dark" value="">sin</button>
+              </div>
+              <div class="col-2">
+                <button type="button" class="btn btn-dark" value="">cos</button>
+              </div>
+              <div class="col-2">
+                <button type="button" class="btn btn-dark" value="">tg</button>
+              </div>
+              <div class="col-2">
+                <button type="button" class="btn btn-dark" value="">x<sup>3</sup></button>
+              </div>
+              <div class="col-2">
+                <button type="button" class="btn btn-dark" value=""><sup>3</sup>√</button>
+              </div>
+              <div class="col-2">
+                <button type="button" class="btn btn-dark" value="">x<sup>n</sup></button>
+              </div>
+            </div>
+
+            <!-- 3fila -->
+            <div class="row my-3 mx-auto">
+              <div class="col-2">
+                <button type="button" class="btn btn-primary" value="1" onclick="numero(this)">1</button>
+              </div>
+              <div class="col-2">
+                <button type="button" class="btn btn-primary" value="2" onclick="numero(this)">2</button>
+              </div>
+              <div class="col-2">
+                <button type="button" class="btn btn-primary" value="3" onclick="numero(this)">3</button>
+              </div>
+              <div class="col-2"><button type="button" class="btn btn-secondary" value="/">/</button></div>
+              <div class="col-2"><button type="button" class="btn btn-secondary" value="%">%</button></div>
+              <div class="col-2"><button type="button" class="btn btn-secondary" value="">In</button></div>
+            </div>
+
+            <!-- 4fila -->
+            <div class="row my-3 mx-auto">
+              <div class="col-2">
+                <button type="button" class="btn btn-primary" value="4" onclick="numero(this)">4</button>
+              </div>
+              <div class="col-2 ">
+                <button type="button" class="btn btn-primary" value="5" onclick="numero(this)">5</button>
+              </div>
+              <div class="col-2">
+                <button type="button" class="btn btn-primary" value="6" onclick="numero(this)">6</button>
+              </div>
+              <div class="col-2"><button type="button" class="btn btn-secondary"value="*">*</button></div>
+              <div class="col-2"><button type="button" class="btn btn-secondary"value="log">log</button></div>
+              <div class="col-2"><button type="button" class="btn btn-danger"value="">e</button></div>
+            </div>
+
+            <!-- 5fila -->
+            <div class="row my-3 mx-auto">
+              <div class="col-2">
+                <button type="button" class="btn btn-primary" value="7" onclick="numero(this)">7</button>
+              </div>
+              <div class="col-2">
+                <button type="button" class="btn btn-primary" value="8" onclick="numero(this)">8</button>
+              </div>
+              <div class="col-2">
+                <button type="button" class="btn btn-primary" value="9" onclick="numero(this)">9</button>
+              </div>
+              <div class="col-2"><button type="button" class="btn btn-secondary" value="-">-</button></div>
+              <div class="col-2"><button type="button" class="btn btn-danger" value="ac">AC</button></div>
+              <div class="col-2  "><button type="button" class="btn btn-success" value="=">=</button></div>
+            </div>
+            <!-- 6fila -->
+            <div class="row my-3 mx-auto">
+              <div class="col-2"><button type="button" class="btn btn-primary" value="." onclick="numero(this)" >.</button></div>
+              <div class="col-2"><button type="button" class="btn btn-primary" value="0" onclick="numero(this)">0</button></div>
+              <div class="col-2"><button type="button" class="btn btn-secondary" value="pi">π</button></div>
+              <div class="col-2"><button type="button" class="btn btn-secondary" value="+" >+</button></div>
+              <div class="col-2"><button type="button" class="btn btn-secondary" value="mr">MR</button></div>
+              <div class="col-2"><button type="button" class="btn btn-info" value="bol">OFF</button></div>
+            </div>
+      </div>
+        <div>
+          <p class="text-end Autor"> Merlo Osvaldo Matias</p>
+        </div>
+      </div>
+    </div>
+  </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="App.js"></script>
+  </body>
+</html>
